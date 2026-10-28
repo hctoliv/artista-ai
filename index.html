@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O Artista.Ai | Contrate artistas para o seu evento</title>
+<meta name="description" content="Encontre e contrate músicos, bandas, DJs e humoristas para shows e eventos sociais e corporativos em todo o Brasil.">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=3">
+<script>try{if(sessionStorage.getItem('oa-intro'))document.documentElement.classList.add('seen')}catch(e){}</script>
+</head>
+<body>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-beam"></div>
+  <img src="img/logo.png" alt="" class="intro-logo">
+</div>
+
+<header class="hd" id="hd">
+  <a href="#top" class="hd-logo" aria-label="O Artista.Ai, início"><img src="img/logo.png" alt="O Artista.Ai"></a>
+  <nav class="hd-nav" id="nav">
+    <a href="#lineup">Line-up</a>
+    <a href="#explorar">Explorar</a>
+    <a href="#formatos">Formatos</a>
+    <a href="#como">Como funciona</a>
+    <a href="#sobre">Sobre</a>
+  </nav>
+  <div class="hd-act">
+    <a class="btn-ghost" href="https://oartista.ai/auth/login" target="_blank" rel="noopener">Entrar</a>
+    <a class="btn-red" href="#anuncie">Anuncie aqui</a>
+    <button class="hd-burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" id="hero" data-hd="dark">
+  <div class="hero-stage" id="stage">
+    <img class="on" src="img/hero/1540039155733-5bb30b53aa14.jpg" alt="">
+    <img src="img/hero/1493225457124-a3eb161ffa5f.jpg" alt="">
+    <img src="img/hero/1516450360452-9312f5e86fc7.jpg" alt="">
+    <img src="img/hero/1512830414785-9928e23475dc.jpg" alt="">
+    <img src="img/hero/1524368535928-5b5e00ddc76b.jpg" alt="">
+    <img src="img/hero/1517230878791-4d28214057c2.jpg" alt="">
+  </div>
+  <div class="hero-dark" id="spot"></div>
+  <div class="hero-grain"></div>
+
+  <div class="hero-in">
+    <p class="kicker"><span class="dot"></span> 3.000+ artistas em todo o Brasil</p>
+    <h1 class="hero-h">
+      <span class="ln">Quem sobe</span>
+      <span class="ln">no seu <em>palco?</em></span>
+    </h1>
+    <div class="flip" aria-live="polite">
+      <span class="flip-lbl">Agora no catálogo</span>
+      <span class="flip-name" id="flip">Thiaguinho</span>
+      <span class="flip-cat" id="flipCat">Pagode, Samba</span>
+    </div>
+
+    <div class="search" id="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" autocomplete="off" placeholder="Busque um artista ou gênero" aria-label="Buscar artista ou gênero">
+      <button id="qGo" class="btn-red">Buscar</button>
+      <div class="search-res" id="qRes" hidden></div>
+    </div>
+    <div class="chips" id="heroChips"></div>
+  </div>
+
+  <div class="hero-foot">
+    <span class="mono">Shows · Eventos sociais · Corporativos · Parabéns personalizado</span>
+    <span class="hero-count mono"><b id="slideN">01</b> / 06</span>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true"><div class="ticker-t" id="ticker"></div></div>
+
+<!-- MANIFESTO + NUMBERS -->
+<section class="mani" data-hd="dark">
+  <p class="mani-t reveal">O Artista é uma start-up criada para facilitar a interação entre <span class="hl">contratante e artista</span>. Aqui você localiza e contrata músicos e bandas para <span class="hl">shows e eventos sociais e corporativos</span> em todo o Brasil.</p>
+  <div class="nums">
+    <div class="num reveal"><b data-to="3000">0</b><span>+</span><small>artistas</small></div>
+    <div class="num reveal"><b data-to="1000">0</b><span>+</span><small>clientes</small></div>
+    <div class="num reveal"><b data-to="25">0</b><small>gêneros e estilos</small></div>
+    <div class="num reveal"><b>BR</b><small>contratações em todo o país</small></div>
+  </div>
+</section>
+
+<!-- LINEUP -->
+<section class="lineup" id="lineup" data-hd="dark">
+  <div class="sec-hd">
+    <p class="mono red">01 · Line-up</p>
+    <h2 class="h2">Tem nome grande<br>no cartaz.</h2>
+    <p class="sec-p">Passe o mouse para ver quem é. Clique para abrir o perfil e solicitar um orçamento.</p>
+  </div>
+  <div class="poster" id="poster"></div>
+  <div class="peek" id="peek" aria-hidden="true"><img alt=""><span></span></div>
+</section>
+
+<!-- EXPLORE -->
+<section class="explore" id="explorar" data-hd="light">
+  <div class="sec-hd">
+    <p class="mono red">02 · Explorar</p>
+    <h2 class="h2">Escolha o som<br>da sua festa.</h2>
+  </div>
+  <div class="tabs-wrap"><div class="tabs" id="tabs" role="tablist"></div></div>
+  <div class="ex-bar">
+    <p class="ex-count mono" id="exCount"></p>
+    <label class="ex-filter"><input id="exQ" type="search" placeholder="Filtrar por nome" aria-label="Filtrar por nome"></label>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="ex-more">
+    <button class="btn-dark" id="more">Ver mais artistas</button>
+    <a class="btn-line" href="https://oartista.ai/artistas" target="_blank" rel="noopener">Catálogo completo com 3.000+ artistas ↗</a>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section class="formats" id="formatos" data-hd="dark">
+  <div class="sec-hd">
+    <p class="mono red">03 · Formatos</p>
+    <h2 class="h2">Do parabéns<br>ao show de estádio.</h2>
+    <p class="sec-p">Cada artista mostra no perfil os formatos que atende. Escolha o seu ingresso.</p>
+  </div>
+  <div class="tickets" id="tickets">
+    <article class="tk reveal">
+      <div class="tk-main"><p class="mono">Nº 01</p><h3>Parabéns pra você</h3><p>Vídeo personalizado para um aniversário, para você ou para outra pessoa.</p></div>
+      <div class="tk-stub"><span>Vídeo</span></div>
+    </article>
+    <article class="tk reveal">
+      <div class="tk-main"><p class="mono">Nº 02</p><h3>Show Pocket</h3><p>Um show presencial para um pequeno grupo de pessoas.</p></div>
+      <div class="tk-stub"><span>Íntimo</span></div>
+    </article>
+    <article class="tk reveal">
+      <div class="tk-main"><p class="mono">Nº 03</p><h3>Show de grande porte</h3><p>Um show presencial para o seu evento, festa ou celebração.</p></div>
+      <div class="tk-stub"><span>Palco</span></div>
+    </article>
+    <article class="tk reveal">
+      <div class="tk-main"><p class="mono">Nº 04</p><h3>Live particular</h3><p>Um show em live particular para você e mais alguns.</p></div>
+      <div class="tk-stub"><span>Online</span></div>
+    </article>
+    <article class="tk reveal">
+      <div class="tk-main"><p class="mono">Nº 05</p><h3>Ensaio da banda</h3><p>Compre uma live dentro do ensaio da banda e assista de perto.</p></div>
+      <div class="tk-stub"><span>Bastidor</span></div>
+    </article>
+    <article class="tk reveal">
+      <div class="tk-main"><p class="mono">Nº 06</p><h3>Presença VIP</h3><p>Agende uma participação VIP do artista no seu evento.</p></div>
+      <div class="tk-stub"><span>VIP</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="how" id="como" data-hd="light">
+  <div class="sec-hd">
+    <p class="mono red">04 · Como funciona</p>
+    <h2 class="h2">Três passos<br>até o show.</h2>
+  </div>
+  <ol class="steps">
+    <li class="step reveal"><span class="step-n">1</span><h3>Encontre</h3><p>Busque por nome, gênero ou cidade entre milhares de músicos, bandas, DJs e humoristas.</p></li>
+    <li class="step reveal"><span class="step-n">2</span><h3>Escolha o formato</h3><p>No perfil do artista você vê bio, redes sociais e os formatos disponíveis para contratar.</p></li>
+    <li class="step reveal"><span class="step-n">3</span><h3>Solicite o orçamento</h3><p>Entre na sua conta e peça o orçamento direto pela plataforma. A gente faz a ponte.</p></li>
+  </ol>
+  <div class="how-cta">
+    <a class="btn-red big" href="https://oartista.ai/artistas" target="_blank" rel="noopener">Ver artistas</a>
+    <a class="btn-line dark" href="https://oartista.ai/auth/login" target="_blank" rel="noopener">Criar conta ou entrar</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="sobre" data-hd="dark">
+  <div class="about-l">
+    <p class="mono red">05 · O sistema</p>
+    <h2 class="h2">A ponte entre<br>talento e oportunidade.</h2>
+    <p class="reveal">No nosso sistema reunimos artistas dos mais variados estilos e gêneros musicais, conectando cada um diretamente a contratantes de forma simples e eficiente.</p>
+    <p class="reveal">Valorizamos a qualidade e usamos tecnologia para criar oportunidades reais: artistas se destacam no mercado e são encontrados por contratantes de todo o Brasil. Ideias viram eventos memoráveis.</p>
+  </div>
+  <div class="team">
+    <figure class="mem reveal">
+      <div class="mem-ph"><img src="img/team/andre.png" alt="André Scooby" loading="lazy"></div>
+      <figcaption><b>André Scooby</b><span>Fundador · Diretor de Relações Institucionais</span></figcaption>
+    </figure>
+    <figure class="mem reveal">
+      <div class="mem-ph"><img src="img/team/willem.png" alt="Willem Van Weerelt" loading="lazy"></div>
+      <figcaption><b>Willem Van Weerelt</b><span>Cofundador · Diretor Artístico</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ADVERTISE -->
+<section class="ad" id="anuncie" data-hd="dark">
+  <div class="ad-wall" id="adWall" aria-hidden="true"></div>
+  <div class="ad-in">
+    <p class="mono red">06 · Anuncie aqui</p>
+    <h2 class="ad-h">Seu nome<br>no <em>cartaz.</em></h2>
+    <p class="ad-p">É artista, banda, DJ ou humorista? Anuncie na plataforma e seja encontrado por contratantes de todo o Brasil.</p>
+    <form class="ad-form" id="adForm">
+      <input name="nome" required placeholder="Nome artístico" aria-label="Nome artístico">
+      <select name="genero" aria-label="Gênero" id="adGen"></select>
+      <input name="cidade" placeholder="Cidade / UF" aria-label="Cidade e estado">
+      <button class="btn-red big" type="submit">Quero anunciar</button>
+    </form>
+    <p class="ad-note mono">Abre o WhatsApp do suporte com a mensagem pronta.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="ft" data-hd="dark">
+  <img src="img/logo.png" alt="O Artista.Ai" class="ft-logo">
+  <div class="ft-cols">
+    <div><p class="mono">Suporte</p><a href="https://wa.me/5511932200422" target="_blank" rel="noopener">(11) 93220-0422</a><a href="mailto:contato@oartista.ai">contato@oartista.ai</a></div>
+    <div><p class="mono">Plataforma</p><a href="https://oartista.ai/artistas" target="_blank" rel="noopener">Ver artistas</a><a href="https://oartista.ai/categorias" target="_blank" rel="noopener">Categorias</a><a href="https://oartista.ai/minha-conta" target="_blank" rel="noopener">Minha conta</a></div>
+    <div><p class="mono">Informações</p><a href="https://oartista.ai/privacy-policy.html" target="_blank" rel="noopener">Políticas de privacidade</a><a href="https://oartista.ai/terms-of-use.html" target="_blank" rel="noopener">Termos de uso</a></div>
+    <div><p class="mono">Social</p><a href="https://www.instagram.com/oartista.ai/" target="_blank" rel="noopener">Instagram @oartista.ai</a></div>
+  </div>
+  <p class="ft-c mono">© O Artista. Todos os direitos reservados.</p>
+</footer>
+
+<a class="wa" href="https://wa.me/5511932200422?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20O%20Artista.Ai" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.7a10.7 10.7 0 0 1-5.5-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.7 10.7 0 1 1 16 26.7Zm5.9-8c-.3-.2-1.9-1-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.5 6.5 0 0 0 1.3 3.4 14.6 14.6 0 0 0 5.7 5c2.1.9 2.9 1 4 .8a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c0-.1-.3-.2-.6-.4Z"/></svg>
+</a>
+
+<script src="data.js?v=1"></script>
+<script src="main.js?v=2"></script>
+</body>
+</html>
